@@ -12,6 +12,9 @@ module.exports = {
         secondary: "#757575",
         "custom-gray": "#f5f5f5",
       },
+      transitionProperty: {
+        width: "width ",
+      },
       width: {
         128: "24rem",
       },

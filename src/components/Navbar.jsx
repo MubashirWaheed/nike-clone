@@ -1,12 +1,15 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from "react";
+import React, { useState } from "react";
 import { ReactComponent as Logo } from "../assets/icons/logo.svg";
 import { ReactComponent as Bag } from "../assets/icons/bag.svg";
 import { ReactComponent as Search } from "../assets/icons/search.svg";
 import { ReactComponent as Hamburger } from "../assets/icons/hamburger.svg";
 import { ReactComponent as Heart } from "../assets/icons/heart.svg";
+import Sidebar from "./Sidebar";
 
 const Navbar = () => {
+  const [sidebar, setSidebar] = useState(false);
+
   return (
     <div>
       <nav className="bg-white flex justify-between px-4 py-3">
@@ -14,14 +17,17 @@ const Navbar = () => {
           <Logo fill="#111" />
         </div>
         <div className="flex"></div>
-        <div className="flex items-center ">
-          <Search className="mx-1" />
-          <Heart className="hidden mx-1" />
-          <Bag className="mx-1" />
-          {/* conditional rendering for  this  */}
-          <Hamburger className="ml-1 cursor-pointer " />
+        <div className="flex items-center gap-4">
+          <Search className="" />
+          <Heart className="hidden" />
+          <Bag className="" />
+          <Hamburger
+            onClick={() => setSidebar(true)}
+            className="cursor-pointer "
+          />
         </div>
       </nav>
+      <Sidebar setSidebar={setSidebar} sidebar={sidebar} />
     </div>
   );
 };
