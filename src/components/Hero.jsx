@@ -5,15 +5,17 @@ import heroMobile from "../assets/images/hero-mobile.webp";
 
 const Hero = ({ width, tabletBP }) => {
   return (
-    <div className="p-4">
-      <div className=" flex items-center justify-center">
+    <div className="p-4 desktop:relative">
+      <div className="flex items-center justify-center ">
         {width > tabletBP ? (
           <img src={hero} alt="hero " />
         ) : (
-          <img src={heroMobile} alt="hero" />
+          <div>
+            <img src={heroMobile} alt="hero" />
+          </div>
         )}
       </div>
-      <div className="flex flex-col items-start mt-3">
+      <div className="flex flex-col items-start mt-3 desktop:absolute desktop:top-16 desktop:left-44">
         <h1 className="text-start text-4xl font-extrabold tracking-tighter">
           SETS FOR SUCCESS
         </h1>
