@@ -77,7 +77,7 @@ const Navbar = () => {
               <p className="">New & Featured</p>
               <motion.div
                 variants={divVariants}
-                className="opacity-0 fixed hidden mt-[13.5px]  w-full left-0 bg-white"
+                className="opacity-0 fixed hidden mt-[13.5px] z-10  w-full left-0 bg-white"
               >
                 {/* inner link */}
                 <div className="flex gap-36 justify-center  py-20">
@@ -175,7 +175,7 @@ const Navbar = () => {
               <p>Men</p>
               <motion.div
                 variants={divVariants}
-                className="opacity-0 fixed hidden mt-[13.5px]  w-full left-0 bg-white"
+                className="opacity-0 fixed hidden mt-[13.5px] z-10 w-full left-0 bg-white"
               >
                 {/* inner link */}
                 <div className="flex gap-36 justify-center  py-20">
@@ -295,7 +295,7 @@ const Navbar = () => {
               <p>Women</p>
               <motion.div
                 variants={divVariants}
-                className="opacity-0 fixed hidden mt-[13.5px] w-full left-0 bg-white"
+                className="opacity-0 fixed hidden mt-[13.5px] z-10 w-full left-0 bg-white"
               >
                 <div className="flex gap-36 justify-center  py-20">
                   <div className="flex flex-col  text-left">
@@ -414,7 +414,7 @@ const Navbar = () => {
               <p>Kids</p>
               <motion.div
                 variants={divVariants}
-                className="border-y opacity-0 hidden mt-[13.3px] fixed w-full left-0 bg-white"
+                className="border-y opacity-0 hidden mt-[13.3px] z-10 fixed w-full left-0 bg-white"
               >
                 <div className="flex gap-36 justify-center  py-20">
                   <div className="flex flex-col  text-left">
