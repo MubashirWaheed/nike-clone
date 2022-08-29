@@ -5,7 +5,7 @@ import heroMobile from "../assets/images/hero-mobile.webp";
 
 const Hero = ({ width, tabletBP }) => {
   return (
-    <div className="p-4 desktop:relative">
+    <div className="p-4 laptop:relative">
       <div className="flex items-center justify-center ">
         {width > tabletBP ? (
           <img src={hero} alt="hero " />
@@ -15,11 +15,12 @@ const Hero = ({ width, tabletBP }) => {
           </div>
         )}
       </div>
-      <div className="flex flex-col items-start mt-3 desktop:absolute desktop:top-16 desktop:left-44">
+      <div className=" flex flex-col items-start  mt-3 laptop:absolute laptop:top-16 laptop:left-[5%] desktop:left-[10%]">
+
         <h1 className="text-start text-4xl font-extrabold tracking-tighter">
           SETS FOR SUCCESS
         </h1>
-        <p className="text-start text-primary my-4">
+        <p className="text-start text-primary my-4 leading-6 font-sans">
           Matching sets that'll carry your year in effortless style
         </p>
         <div className="my-3">
