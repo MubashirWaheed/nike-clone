@@ -5,7 +5,10 @@ module.exports = {
   theme: {
     screens: {
       tablet: "600px",
-      desktop: "960px",
+      // laptopn: "960px",
+      // desktop: "1024px",
+      laptop: "1024px",
+      desktop: "1280px",
     },
     extend: {
       colors: {

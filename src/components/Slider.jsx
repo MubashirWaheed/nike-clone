@@ -23,8 +23,10 @@ const Slider = () => {
   return (
     <div className="p-4 mt-6">
       {/* Header  */}
-      <div className="flex items-center justify-between mb-4">
-        <h1 className="laptop:ml-[5%] desktop:ml-[8%] text-2xl text-primary">Popular Right Now</h1>
+      <header className="flex items-center justify-between mb-4">
+        <h1 className="laptop:ml-[5%] desktop:ml-[8%] text-2xl text-primary">
+          Popular Right Now
+        </h1>
         <div className="flex justify-end laptop:mr-[5%]">
           <div
             onClick={slideLeft}
@@ -40,12 +42,12 @@ const Slider = () => {
             <NextArrow />
           </div>
         </div>
-      </div>
+      </header>
 
       {/*CARDS */}
-      <div
+      <section
         ref={cardContainer}
-        className="flex overflow-x-auto scroll-smooth gap-3 snap-mandatory snap-x"
+        className="flex overflow-x-auto scroll-smooth gap-3 snap-mandatory snap-x pb-4"
       >
         {/* bg-custom-gray */}
         <div className="w-[330px] min-w-[330px] laptop:w-128 laptop:min-w-128 snap-center">
@@ -128,7 +130,7 @@ const Slider = () => {
           </div>
           <p className="text-start  text-secondary">Men's Shoes</p>
         </div>
-      </div>
+      </section>
     </div>
   );
 };

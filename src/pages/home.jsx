@@ -5,9 +5,9 @@ import Join from "../components/Join";
 import Sale from "../components/Sale";
 import Slider from "../components/Slider";
 import Hero from "../components/Hero";
-import doIt from "../assets/images/nike-just-do-it.jpg";
-import justDoIt2 from "../assets/images/jusDoIt2.webp";
-
+import Fall from "../components/Fall";
+import Membership from "../components/Membership";
+import Footer from "../components/Footer";
 const Home = () => {
   const [width, setWidth] = useState(window.innerWidth);
   const breakPoint = 960;
@@ -28,13 +28,12 @@ const Home = () => {
         <Navbar />
         <Sale />
         <Hero width={width} tabletBP={tabletBP} />
-        <div className="flex items-center justify-center flex-wrap">
-          <img src={doIt} alt="test" />
-          <img src={justDoIt2} alt="hello" />
-        </div>
+        <Fall />
       </div>
 
       <Slider />
+      <Membership />
+      <Footer width={width} />
     </div>
   );
 };

@@ -42,17 +42,6 @@ const divVariants = {
   },
 };
 
-const linksVariants = {
-  rest: {
-    opacity: 0,
-  },
-  hover: {
-    // delay: 4,
-    opacity: 1,
-    // 0,
-  },
-};
-
 const Navbar = () => {
   const [sidebar, setSidebar] = useState(false);
 
@@ -523,7 +512,7 @@ const Navbar = () => {
           </motion.div>
         </div>
 
-        <div className="flex items-center gap-3  w-full justify-end  ">
+        <div className="flex items-center gap-3 desktop:gap-5  w-full justify-end  ">
           <label className="hidden desktop:block relative">
             <Search className="absolute top-1.5 px-1 ml-1" />
             <input
@@ -533,13 +522,13 @@ const Navbar = () => {
             />
           </label>
           <Search className="desktop:hidden" />
-          <Heart className="hidden desktop:block" />
-          <Bag className="" />
+          <Heart className="hidden desktop:block hover:bg-custom-gray cursor-pointer rounded-full" />
+          <Bag className="cursor-pointer hover:bg-custom-gray" />
           <div
             onClick={() => setSidebar(true)}
             className="hover:bg-custom-gray p-3 rounded-full cursor-pointer desktop:hidden "
           >
-            <Hamburger className=" rounded-full  " />
+            <Hamburger className=" rounded-full bg-custom-gray cursor-pointer " />
           </div>
         </div>
       </nav>

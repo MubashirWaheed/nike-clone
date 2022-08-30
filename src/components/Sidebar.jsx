@@ -18,20 +18,6 @@ const Sidebar = ({ setSidebar, sidebar }) => {
     from: { x: 0, opacity: 1 },
   }));
 
-  const handleClick = () => {
-    console.log("div clicked");
-    api.start({
-      from: {
-        x: 0,
-        opacity: 1,
-      },
-      to: {
-        opacity: 0,
-        x: -299,
-      },
-    });
-  };
-
   return transition(
     (styles, item) =>
       item && (
@@ -40,46 +26,68 @@ const Sidebar = ({ setSidebar, sidebar }) => {
           className="h-full w-72 bg-custom-gray fixed top-0 right-0 "
         >
           <div>
-            <span
-              className="inline-block bg-red-100 cursor-pointer "
-              onClick={() => {
-                setSidebar(!sidebar);
-              }}
-            >
-              <Close />
-            </span>
+            <div className=" flex justify-end ">
+              <span
+                className="inline-block px-3  cursor-pointer mt-5 mr-5 "
+                onClick={() => {
+                  setSidebar(!sidebar);
+                }}
+              >
+                <Close />
+              </span>
+            </div>
+
             {/* Categories div */}
-
-            <animated.div className="mt-4" style={spring} onClick={handleClick}>
-              <span className="bg-red-200 flex justify-between cursor-pointer">
-                New & Featured
-                <Arrow />
-              </span>
-              <span className="bg-red-200 flex justify-between">
-                Men
-                <Arrow />
-              </span>
-              <span className="bg-red-200 flex justify-between">
-                Women
-                <Arrow />
-              </span>
-              <span className="bg-red-200 flex justify-between">
-                Kids
-                <Arrow />
-              </span>
-            </animated.div>
+            <div className="mt-4 px-7" style={spring}>
+              <ul>
+                <li className=" cursor-pointer py-2 ">
+                  <a
+                    className="text-primary flex justify-between font-sans text-2xl "
+                    href="#"
+                  >
+                    New & Featured
+                    <Arrow />
+                  </a>
+                </li>
+                <li className=" cursor-pointer py-2">
+                  <a
+                    className="text-primary flex justify-between font-sans text-2xl"
+                    href="#"
+                  >
+                    Men
+                    <Arrow />
+                  </a>
+                </li>
+                <li className=" cursor-pointer py-2">
+                  <a
+                    className="text-primary flex justify-between font-sans text-2xl"
+                    href="#"
+                  >
+                    Women
+                    <Arrow />
+                  </a>
+                </li>
+                <li className=" cursor-pointer py-2">
+                  <a
+                    className="text-primary flex justify-between font-sans text-2xl"
+                    href="#"
+                  >
+                    Kids
+                    <Arrow />
+                  </a>
+                </li>
+                <li className=" cursor-pointer py-2">
+                  <a
+                    className="text-primary flex justify-between font-sans text-2xl"
+                    href="#"
+                  >
+                    Back to School
+                    <Arrow />
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
-
-          {/* Links Div */}
-          {/* <animated.div
-            style={props}
-            className="h-full z-20 w-72 bg-green-300 fixed top-0 right-0"
-          >
-            <span className="cursor-pointer">
-              <BackArrow />
-              <p>All</p>
-            </span>
-          </animated.div> */}
         </animated.div>
       )
   );
